@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/titleTiket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Tiket Bioskop"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:id="@+id/tbl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTiket"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/txtFilm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Film"
+                android:textColor="@color/green"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editFilm"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:hint="entry nama film"
+                android:textColor="@color/red"
+                android:textColorHint="@color/red"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/harga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga Tiket"
+                android:textColor="@color/green"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editHarga"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:hint="entry harga tiket"
+                android:textColor="@color/red"
+                android:textColorHint="@color/red"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/txtJumlah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jumlah Tiket"
+                android:textColor="@color/green"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editJumlah"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:hint="entry jumlah tiket"
+                android:textColorHint="@color/red"
+                android:textSize="18sp"
+                android:textColor="@color/red"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/txtJam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Jam Tayang"
+                android:textColor="@color/green"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinJam"
+                android:layout_height="50dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="50dp" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/txtBayar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tbl1"
+        android:layout_marginStart="20dp"
+        android:text="Cara Bayar"
+        android:textColor="@color/green"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rgBayar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtBayar"
+        android:layout_marginTop="5dp">
+
+        <RadioButton
+            android:id="@+id/rbCash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:text="Cash"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rbCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:text="Card"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbMobile"
+            android:text="Mobile"
+            android:layout_marginStart="150dp"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtBayarLain"
+        android:text="Bayar Tambahan"
+        android:textColor="@color/green"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/rgBayar"
+        android:layout_marginStart="20dp"/>
+
+    <CheckBox
+        android:id="@+id/chkQris"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qris"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:layout_marginStart="150dp"
+        android:textSize="18sp"
+        android:layout_below="@id/txtBayarLain"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chkBrizzi"
+        android:textColor="@color/red"
+        android:text="Brizzi"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginStart="150dp"
+        android:layout_below="@id/chkQris"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/btnProses"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/green"
+        android:text="Proses"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/chkBrizzi"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/txtTrans"
+        android:text="Detil Pembayaran"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/chkBrizzi"
+        android:layout_marginTop="120dp"
+        android:textColor="@color/red"
+        android:layout_marginStart="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
+</ScrollView>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titleTransaksi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="TIKET PESAWAT"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TableLayout
+            android:id="@+id/tbl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTransaksi"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/txtTujuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kota Tujuan"
+                    android:textColor="@color/green"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTujuan"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:hint="entry kota tujuan"
+                    android:textColor="@color/red"
+                    android:textColorHint="@color/red"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/txtHarga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Harga Tiket"
+                    android:textColor="@color/green"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editHarga"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:hint="entry harga tiket"
+                    android:textColor="@color/red"
+                    android:textColorHint="@color/red"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/txtJumlah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jumlah Tiket"
+                    android:textColor="@color/green"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editJumlah"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:hint="entry jumlah beli"
+                    android:textColor="@color/red"
+                    android:textColorHint="@color/red"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/txtKeberangkatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jam Keberangkatan"
+                    android:textColor="@color/green"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinBerangkat"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="50dp" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txtBayar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tbl1"
+            android:layout_marginStart="20dp"
+            android:text="Cara Bayar"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgBayar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtBayar"
+            android:layout_marginTop="5dp">
+
+            <RadioButton
+                android:id="@+id/rbCash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:text="Cash"
+                android:textColor="@color/red"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/rbCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:text=" Master/Debit"
+                android:textColor="@color/red"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/rbMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:text="Mobile Bangking"
+                android:textColor="@color/red"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txtBayarLain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rgBayar"
+            android:layout_marginStart="20dp"
+            android:text="Tambahan Bayar"
+            android:textColor="@color/green"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/chkBagasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtBayarLain"
+            android:layout_marginStart="120dp"
+            android:text="Bagasi"
+            android:textColor="@color/red"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/chkExecutive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chkBagasi"
+            android:layout_marginStart="120dp"
+            android:text="Executive Longue"
+            android:textColor="@color/red"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/chkMakanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chkExecutive"
+            android:layout_marginStart="120dp"
+            android:text="Makanan Minuman"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnProses"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/chkMakanan"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/green"
+            android:text="PROSES"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtTrans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnProses"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:text="Detil Pembelian"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</ScrollView>
